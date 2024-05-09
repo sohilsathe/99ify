@@ -34,9 +34,7 @@ sudo pfctl -E
 sudo cp /etc/pf.conf ./pf.conf.backup
 
 # Task 7: Append lines to pf.conf
-echo "dummynet-anchor $ANCHOR_NAME"
 echo "dummynet-anchor $ANCHOR_NAME" | sudo tee -a /etc/pf.conf
-echo "anchor $ANCHOR_NAME"
 echo "anchor $ANCHOR_NAME" | sudo tee -a /etc/pf.conf
 
 # Task 8: Reload pfctl

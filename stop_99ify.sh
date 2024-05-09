@@ -7,7 +7,7 @@ ANCHOR_NAME="99ify"
 sudo pfctl -a $ANCHOR_NAME -F all
 
 # Task 3: Flush dummynet pipes
-sudo dnctl flush -f
+sudo dnctl -f flush
 
 # Task 4: Delete throttle_rules.txt
 rm -f ./pf_rules.txt
@@ -21,4 +21,4 @@ sudo pfctl -f /etc/pf.conf
 # Task 7: Disable pfctl
 sudo pfctl -d
 
-echo "Cleanup complete. System returned to a clean state."
+echo "Cleanup complete."
